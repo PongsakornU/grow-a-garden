@@ -71,7 +71,7 @@ class Program
         var Eggs = new List<string> { "Mythical Egg", "Paradise Egg", "Bug Egg" };
 
         // Build Discord-friendly message
-        var message = $"**🌦 Weather:** {data.Weather?.Type}\n";
+        var message = $"@everyone Hello! \n **🌦 Weather:** {data.Weather?.Type}\n";
         if (data.Weather?.Effects != null && data.Weather.Effects.Count > 0)
         {
             message += "Effects:\n" + string.Join("\n", data.Weather.Effects.Select(e => $"- {e}")) + "\n";
