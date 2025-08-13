@@ -66,6 +66,9 @@ class Program
             Console.WriteLine("No data received.");
             return;
         }
+        var Gear = new List<string> { "Basic Sprinkler", "Advanced Sprinkler", "Godly Sprinkler", "Master Sprinkler", "Grandmaster Sprinkler", "Medium Toy", "Levelup Lollipop" };
+        var Seeds = new List<string> { "Burning Bud", "Elder Strawberry", "Giant Pinecone", "Sugar Apple", "Ember Lily", "Beanstalk" };
+        var Eggs = new List<string> { "Mythical Egg", "Paradise Egg", "Bug Egg" };
 
         // Build Discord-friendly message
         var message = $"**🌦 Weather:** {data.Weather?.Type}\n";
@@ -76,17 +79,17 @@ class Program
 
         if (data.Gear != null && data.Gear.Count > 0)
         {
-            message += "\n**🛠 Gear:**\n" + string.Join("\n", data.Gear.Select(g => $"• {g.Name} x{g.Quantity}"));
+            message += "\n**🛠 Gear:**\n" + string.Join("\n", data.Gear.Where(i=>Gear.Contains(i.Name)).Select(g => $"• {g.Name} x{g.Quantity}"));
         }
 
         if (data.Seeds != null && data.Seeds.Count > 0)
         {
-            message += "\n\n**🌱 Seeds:**\n" + string.Join("\n", data.Seeds.Select(s => $"• {s.Name} x{s.Quantity}"));
+            message += "\n\n**🌱 Seeds:**\n" + string.Join("\n", data.Seeds.Where(i => Seeds.Contains(i.Name)).Select(s => $"• {s.Name} x{s.Quantity}"));
         }
 
         if (data.Eggs != null && data.Eggs.Count > 0)
         {
-            message += "\n\n**🥚 Eggs:**\n" + string.Join("\n", data.Eggs.Select(e => $"• {e.Name} x{e.Quantity}"));
+            message += "\n\n**🥚 Eggs:**\n" + string.Join("\n", data.Eggs.Where(i => Eggs.Contains(i.Name)).Select(e => $"• {e.Name} x{e.Quantity}"));
         }
 
         if (data.ChrisPCraving != null)
