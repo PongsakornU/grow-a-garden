@@ -72,7 +72,7 @@ class Program
 
         // Build Discord-friendly message
         var message = $"@everyone Hello! \n **🌦 Weather:** {data.Weather?.Type}\n";
-        if (data.Weather?.Effects != null && data.Weather.Effects.Count > 0)
+        if (data.Weather?.Effects != null && data.Weather.Effects.Count > 0 && data.Weather.Active)
         {
             message += "Effects:\n" + string.Join("\n", data.Weather.Effects.Select(e => $"- {e}")) + "\n";
         }
