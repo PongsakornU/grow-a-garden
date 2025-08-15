@@ -53,6 +53,7 @@ class Program
 {
     static async Task Main()
     {
+        Thread.Sleep(10000);
         string apiUrl = "https://gagapi.onrender.com/alldata";
         string discordWebhook = "https://discord.com/api/webhooks/1405205335035084810/4KeFzjsdgoD7GMv61t5vXU0RBA6uV91tVkU14_TWcL1otgFpPc8Gvmil8TGXX3fwsQEu"; // Replace with your webhook
 
