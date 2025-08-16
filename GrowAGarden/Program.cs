@@ -67,7 +67,7 @@ class Program
             return;
         }
         var Gear = new List<string> { "Basic Sprinkler", "Advanced Sprinkler", "Godly Sprinkler", "Master Sprinkler", "Grandmaster Sprinkler", "Medium Toy", "Levelup Lollipop" };
-        var Seeds = new List<string> { "Burning Bud", "Elder Strawberry", "Giant Pinecone", "Sugar Apple", "Ember Lily", "Beanstalk" };
+        var Seeds = new List<string> {"Romanesco", "Burning Bud", "Elder Strawberry", "Giant Pinecone", "Sugar Apple", "Ember Lily", "Beanstalk" };
         var Eggs = new List<string> { "Mythical Egg", "Paradise Egg", "Bug Egg", "Rare Summer Egg" };
 
         // Build Discord-friendly message
