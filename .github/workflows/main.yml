@@ -20,6 +20,8 @@ jobs:
 
       - name: Build project
         run: dotnet build --no-restore
-
+        
       - name: Run project
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
         run: dotnet run --project GrowAGarden
