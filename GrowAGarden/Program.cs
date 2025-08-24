@@ -73,7 +73,7 @@ class Program
                 Console.WriteLine("No data received.");
                 return;
             }
-            var Gear = new List<string> { "Basic Sprinkler", "Advanced Sprinkler", "Godly Sprinkler", "Master Sprinkler", "Grandmaster Sprinkler", "Medium Toy", "Levelup Lollipop" };
+            var Gear = new List<string> { "Cleansing Pet Shard","Basic Sprinkler", "Advanced Sprinkler", "Godly Sprinkler", "Master Sprinkler", "Grandmaster Sprinkler", "Medium Toy", "Levelup Lollipop" };
             var Seeds = new List<string> { "Romanesco", "Burning Bud", "Elder Strawberry", "Giant Pinecone", "Sugar Apple", "Ember Lily", "Beanstalk" };
             var Eggs = new List<string> { "Common Egg" };
 
