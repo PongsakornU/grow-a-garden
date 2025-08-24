@@ -75,7 +75,7 @@ class Program
             }
             var Gear = new List<string> { "Basic Sprinkler", "Advanced Sprinkler", "Godly Sprinkler", "Master Sprinkler", "Grandmaster Sprinkler", "Medium Toy", "Levelup Lollipop" };
             var Seeds = new List<string> { "Romanesco", "Burning Bud", "Elder Strawberry", "Giant Pinecone", "Sugar Apple", "Ember Lily", "Beanstalk" };
-            var Eggs = new List<string> { "Mythical Egg", "Paradise Egg", "Bug Egg", "Rare Summer Egg" };
+            var Eggs = new List<string> { "Common Egg" };
 
             // Build Discord-friendly message
             var message = $"@everyone Hello! \n **🌦 Weather:** {data.Weather?.Type}\n";
@@ -96,7 +96,7 @@ class Program
 
             if (data.Eggs != null && data.Eggs.Count > 0)
             {
-                message += "\n\n**🥚 Eggs:**\n" + string.Join("\n", data.Eggs.Where(i => Eggs.Contains(i.Name)).Select(e => $"• {e.Name} x{e.Quantity}"));
+                message += "\n\n**🥚 Eggs:**\n" + string.Join("\n", data.Eggs.Where(i => !Eggs.Contains(i.Name)).Select(e => $"• {e.Name} x{e.Quantity}"));
             }
 
             if (data.ChrisPCraving != null)
